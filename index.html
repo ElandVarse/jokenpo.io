@@ -1,0 +1,57 @@
+<!--
+    Objetivos: 
+    - Funcionar
+    - Border iluminado em cima do item escolhido pelo computer assim que o player escolher
+    - Responsivo
+    - Usar o meio pra mostrar o resultado
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href='style.css' rel='stylesheet'>
+    <title>Jokenpo</title>
+</head>
+<body>
+    <header>
+        <h1>Pedra, Papel e Tesoura dos Deuses </h1>
+    </header>
+    <main>     
+        <h2>Player</h2>
+            <ul id='img'>
+                <li class='esq'>
+                    <img id='pedra' src='img/pedra.png' name='pedra'>
+                </li>
+                <li class='esq'>
+                    <img id='papel' src='img/papel.png' name='papel'>
+                </li>
+                <li class='esq'>
+                    <img id='tesoura' src='img/tesoura.png' name='tesoura'>
+                </li>
+            </ul>
+    </main>
+    <section>
+        <h1 id='texto'></h1>
+    </section>
+    <aside>
+        <h2>Computer</h2>
+        <div>
+            <ul>
+                <li>
+                    <img src='img/pedra.png'>
+                </li>
+                <li>
+                    <img src='img/papel.png'>
+                </li>
+                <li>
+                    <img src='img/tesoura.png'>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src='main.js'></script>
+</body>
+</html>
