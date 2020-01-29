@@ -7,6 +7,10 @@ function computerPlay(){
 }
 //Jogo
 function jokenpo(){
+    let pcPe = document.querySelector('#pcPe');
+    let pcPap = document.querySelector('#pcPap');
+    let pcTes = document.querySelector('#pcTes');
+
     //Aqui é pra pegar o resultado de qual imagem foi clicada
     document.getElementById('img').onclick= function(e){
     let player = e.target.id;
@@ -18,53 +22,71 @@ function jokenpo(){
         switch(computer){
             case 'pedra':
                 //teste de resultado
+                //none é pra zerar bordas toda vez que o player fizer uma escolha, então é selecionada apenas a borda do resultado do computador
+                pcTes.style.border= 'none';
+                pcPap.style.border= 'none';
+                pcPe.style.border= '3px solid red';
                 texto.innerHTML='Empate';
                 break;
             case 'papel':
+                pcTes.style.border= 'none';
+                pcPe.style.border= 'none';
+                pcPap.style.border= '3px solid red';
                 texto.innerHTML='Perdeu';
                 break;
             case 'tesoura':
+                pcPe.style.border= 'none';
+                pcPap.style.border= 'none';
+                pcTes.style.border= '3px solid red';
                 texto.innerHTML='Venceu';
                 break;
         }
         break;
-
-    case 'papel':
-        switch(computer){
-            case 'pedra':
-                //teste de resultado
-                alert(`Computador escolheu ${computer}`);
-                alert('Você venceu!')
-                break;
-            case 'papel':
-                alert(`Computador escolheu ${computer}`);
-                alert('Empate')
-                break;
-            case 'tesoura':
-                alert(`Computador escolheu ${computer}`);
-                alert('Você perdeu')
-                break;
-        }
-    break;
-
-    case 'tesoura':
-        switch(computer){
-            case 'pedra':
-                alert(`Computador escolheu ${computer}`);
-                alert('Você perdeu')
-                break;
-            case 'papel':
-                alert(`Computador escolheu ${computer}`);
-                alert('Você venceu!')
-                break;
-            case 'tesoura':
-                alert(`Computador escolheu ${computer}`);
-                alert('Empate')
-                break;
-         }
-         break;
-    } 
- }
+        case 'papel':
+            switch(computer){
+                case 'pedra':
+                    pcPap.style.border= 'none';
+                    pcTes.style.border= 'none';
+                    pcPe.style.border= '3px solid red';
+                    texto.innerHTML='Venceu';
+                    break;
+                case 'papel':
+                    pcTes.style.border= 'none';
+                    pcPe.style.border= 'none';
+                    pcPap.style.border= '3px solid red';
+                    texto.innerHTML='Empate';
+                    break;
+                case 'tesoura':
+                    pcPe.style.border= 'none';
+                    pcPap.style.border= 'none';
+                    pcTes.style.border= '3px solid red';
+                    texto.innerHTML='Perdeu';
+                    break;
+            }
+        break;
+        case 'tesoura':
+            switch(computer){
+                case 'pedra':
+                    pcTes.style.border= 'none';
+                    pcPap.style.border= 'none';
+                    pcPe.style.border= '3px solid red';
+                    texto.innerHTML='Perdeu';
+                    break;
+                case 'papel':
+                    pcPe.style.border= 'none';
+                    pcTes.style.border= 'none';
+                    pcPap.style.border= '3px solid red';
+                    texto.innerHTML='Venceu';
+                case 'tesoura':
+                    pcPap.style.border= 'none';
+                    pcPe.style.border= 'none';
+                    pcTes.style.border= '3px solid red';
+                    texto.innerHTML='Empate';
+                    break;
+            }
+            break;
+        } 
+    }
 }
 jokenpo();
 

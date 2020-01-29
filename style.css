@@ -1,8 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
     font-size: 100%;
-    border:none;
     outline: none;
     font-weight: 700;
     box-sizing: border-box;
@@ -22,41 +20,49 @@ header{
     border-bottom: 1px solid white;
     font-size: 24pt;
 }
+/*---------------Ícones----------------- */
 ul{
-    margin-top: 8px;
     list-style-type: none;
+    clear: both;
+    padding: 0;
 }
 li{
-    padding-top: 4%;
+    margin-top: 15%;
 }
-.esq:hover{
+img{width: 80px;}
+.esq img:hover{
+    transform: scale(1.25);
     border: 3px solid rgb(255, 94, 0);
     cursor: pointer;
 }
-img{
-    width: 80px;
-    height: 80px;
-}
+/*---------------Esquerda----------------- */
 main{
     float:left;
     padding: 3% 4%;
     text-align: center;
 }
+/*---------------Meio---------------- */
 section{
-    position: absolute;
+    position: fixed;
     width: 100%;
+    margin-top: 35%;
     text-align: center;
-    padding: 3% 4%;
-    margin-top: 25%;
 }
+/*---------------Direita----------------- */
 aside{
     float: right;
     padding: 3% 4%;
     text-align: center;
 }
-/*Arrumando resolução*/
-@media(min-width: 1200px){
+aside li{margin-top: 10%;}
+/*---------------Resolução----------------- */
+@media(min-width: 480px){
     section{
-        margin-top: 10%;
+        margin-top: 25%;
+   }
+}
+@media(min-width: 720px){
+    section{
+        margin-top: 15%;
    }
 }
