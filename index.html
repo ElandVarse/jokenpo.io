@@ -13,45 +13,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href='style.css' rel='stylesheet'>
-    <title>Jo ken po</title>
+    <title>Jo-ken-po</title>
 </head>
 <body>
-    <header>
-        <h1>Pedra, Papel e Tesoura dos Deuses </h1>
+    <header class='container'>
+        <h1>Pedra / Papel / Tesoura / dos Deuses</h1>
     </header>
-    <main>     
-        <h2>Player</h2>
-        <ul id='img' class='esq'>
-            <li>
-                <img id='pedra' src='img/pedra.png' name='pedra'>
-            </li>
-            <li>
-                <img id='papel' src='img/papel.png' name='papel'>
-            </li>
-            <li>
-                <img id='tesoura' src='img/tesoura.png' name='tesoura'>
-            </li>
-        </ul>
-    </main>
-    <section>
-        <h2 id='texto'></h2>
-    </section>
-    <aside>
-        <h2>Computer</h2>
-        <div>
-            <ul class='dir'>
+    <div class='menu'>
+        <p id='vit'>Vitórias:</p>
+        <p id='der'>Derrotas:</p>
+        <p id='emp'>Empates:</p>
+    </div>
+    <div class='interface'>
+        <main class='container'>   
+            <ul id='img' class='esq'>
+                <h2>Player</h2>
                 <li>
-                    <img id='pcPe' src='img/pedra.png'>
+                    <img id='pedra' src='img/pedra.png' name='pedra'>
                 </li>
                 <li>
-                    <img id='pcPap'src='img/papel.png'>
+                    <img id='papel' src='img/papel.png' name='papel'>
                 </li>
                 <li>
-                    <img id='pcTes' src='img/tesoura.png'>
+                    <img id='tesoura' src='img/tesoura.png' name='tesoura'>
                 </li>
             </ul>
-        </div>
-    </aside>
+        </main>
+
+        <section>
+            <h3 id='texto'></h3>
+        </section>
+
+        <aside class='container'>
+            <div>
+                <ul class='dir'>
+                    <h2>Computer</h2>
+                    <li>
+                        <img id='pcPe' src='img/pedra.png'>
+                    </li>
+                    <li>
+                        <img id='pcPap'src='img/papel.png'>
+                    </li>
+                    <li>
+                        <img id='pcTes' src='img/tesoura.png'>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer>
+        <p>nice</p>
+    </footer>
     <script src='main.js'></script>
 </body>
 </html>

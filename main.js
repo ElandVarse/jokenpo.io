@@ -7,9 +7,10 @@ function computerPlay(){
 }
 //Jogo
 function jokenpo(){
-    let pcPe = document.querySelector('#pcPe');
-    let pcPap = document.querySelector('#pcPap');
-    let pcTes = document.querySelector('#pcTes');
+    //variáveis pra utilizar no contador 
+    let emp=0;
+    let vit=0;
+    let der=0;
 
     //Aqui é pra pegar o resultado de qual imagem foi clicada
     document.getElementById('img').onclick= function(e){
@@ -27,18 +28,24 @@ function jokenpo(){
                 pcPap.style.border= 'none';
                 pcPe.style.border= '3px solid red';
                 texto.innerHTML='Empate';
+                emp++
+                document.getElementById("emp").innerHTML=`Empates:${emp}`;
                 break;
             case 'papel':
                 pcTes.style.border= 'none';
                 pcPe.style.border= 'none';
                 pcPap.style.border= '3px solid red';
                 texto.innerHTML='Perdeu';
+                der++;
+                document.getElementById("der").innerHTML=`Derrotas:${der}`;
                 break;
             case 'tesoura':
                 pcPe.style.border= 'none';
                 pcPap.style.border= 'none';
                 pcTes.style.border= '3px solid red';
                 texto.innerHTML='Venceu';
+                vit++;
+                document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
                 break;
         }
         break;
@@ -49,6 +56,8 @@ function jokenpo(){
                     pcTes.style.border= 'none';
                     pcPe.style.border= '3px solid red';
                     texto.innerHTML='Venceu';
+                    vit++;
+                    document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
                     break;
                 case 'papel':
                     pcTes.style.border= 'none';
@@ -56,11 +65,15 @@ function jokenpo(){
                     pcPap.style.border= '3px solid red';
                     texto.innerHTML='Empate';
                     break;
+                    emp++
+                    document.getElementById("emp").innerHTML=`Empates:${emp}`;
                 case 'tesoura':
                     pcPe.style.border= 'none';
                     pcPap.style.border= 'none';
                     pcTes.style.border= '3px solid red';
                     texto.innerHTML='Perdeu';
+                    der++;
+                    document.getElementById("der").innerHTML=`Derrotas:${der}`;
                     break;
             }
         break;
@@ -71,17 +84,24 @@ function jokenpo(){
                     pcPap.style.border= 'none';
                     pcPe.style.border= '3px solid red';
                     texto.innerHTML='Perdeu';
+                    der++;
+                    document.getElementById("der").innerHTML=`Derrotas:${der}`;
                     break;
                 case 'papel':
                     pcPe.style.border= 'none';
                     pcTes.style.border= 'none';
                     pcPap.style.border= '3px solid red';
                     texto.innerHTML='Venceu';
+                    vit++;
+                    document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
+                    break;
                 case 'tesoura':
                     pcPap.style.border= 'none';
                     pcPe.style.border= 'none';
                     pcTes.style.border= '3px solid red';
                     texto.innerHTML='Empate';
+                    emp++
+                    document.getElementById("emp").innerHTML=`Empates:${emp}`;
                     break;
             }
             break;
@@ -89,5 +109,3 @@ function jokenpo(){
     }
 }
 jokenpo();
-
-//respirando através de alerts :(
