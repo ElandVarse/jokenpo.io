@@ -4,6 +4,7 @@
     - Border iluminado em cima do item escolhido pelo computer assim que o player escolher
     - Responsivo
     - Usar o meio pra mostrar o resultado
+    - O Usuário só pode jogar assim que o resultado da partida anterior sumir da tela
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +21,9 @@
         <h1>Pedra / Papel / Tesoura / dos Deuses</h1>
     </header>
     <div class='menu'>
-        <p id='vit'>Vitórias:</p>
-        <p id='der'>Derrotas:</p>
-        <p id='emp'>Empates:</p>
+        <p id='vit' class='vic'>Vitórias:</p>
+        <p id='der' class='der'>Derrotas:</p>
+        <p id='emp' class='emp'>Empates:</p>
     </div>
     <div class='interface'>
         <main class='container'>   
@@ -42,11 +43,11 @@
 
         <section>
             <h3 id='texto'></h3>
+            <p id='resultados'></p>
         </section>
 
         <aside class='container'>
-            <div>
-                <ul class='dir'>
+                <ul>
                     <h2>Computer</h2>
                     <li>
                         <img id='pcPe' src='img/pedra.png'>
@@ -58,7 +59,6 @@
                         <img id='pcTes' src='img/tesoura.png'>
                     </li>
                 </ul>
-            </div>
         </aside>
     </div>
     <footer>

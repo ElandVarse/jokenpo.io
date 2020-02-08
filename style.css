@@ -7,7 +7,7 @@
     box-sizing: border-box;
     font-family: 'Press start 2p';
     color: white;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px black;
 }
 html{
     height: 100%;
@@ -39,24 +39,32 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #1D1F61;
+    background-color: rgb(21, 21, 78);
     font-size: 10pt;
 }
 .menu p{
-    padding: 1% 0;
+    font-size: 10pt;
+    padding: 5pt 0;
 }
+.der{color: rgb(184, 66, 66);}
+.vic{color: rgb(38, 255, 0)}
+.emp{color:#adb1ad}
 /*---------------Ícones----------------- */
+h2{font-size: 15pt;}
 ul{
     list-style-type: none;
     clear: both;
+    display: flex;
+    flex-direction: column;
 }
 li{
-    margin-top: 15%;
+    flex: 1;
 }
-img{width: 80px;}
+img{width: 80px;
+margin-top: 20%;}
 .esq img:hover{
     transform: scale(1.25);
-    border: 3px solid rgb(38, 255, 0);
+    border: 3px solid #26ff00;
     cursor: pointer;
 }
 /*---------------Esquerda----------------- */
@@ -67,16 +75,21 @@ main{
 /*---------------Meio---------------- */
 section{
     display: flex;
-    margin-top: 35%;
-    flex:1;
+    flex: 1;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+section h3{
+    margin-bottom: 2%;
 }
 /*---------------Direita----------------- */
 aside{
     display: flex;
     text-align: center;
 }
-aside li{margin-top: 10%;}
 /*---------------Rodapé----------------- */
 footer{
     background-color: #1D1F61;
@@ -86,12 +99,10 @@ footer{
 }
 /*---------------Resolução----------------- */
 @media(min-width: 480px){
-    section{
-        margin-top: 25%;
-   }
 }
 @media(min-width: 720px){
-    section{
-        margin-top: 15%;
-   }
+    .menu p{
+        font-size: 14pt;
+    }
+    img{width: 120px;}
 }

@@ -28,6 +28,8 @@ function jokenpo(){
                 pcPap.style.border= 'none';
                 pcPe.style.border= '3px solid red';
                 texto.innerHTML='Empate';
+                resultados.innerHTML='Pedra e Pedra'
+                resultados.style.color='#adb1ad'
                 emp++
                 document.getElementById("emp").innerHTML=`Empates:${emp}`;
                 break;
@@ -36,6 +38,8 @@ function jokenpo(){
                 pcPe.style.border= 'none';
                 pcPap.style.border= '3px solid red';
                 texto.innerHTML='Perdeu';
+                resultados.innerHTML='Papel bate Pedra'
+                resultados.style.color='red'
                 der++;
                 document.getElementById("der").innerHTML=`Derrotas:${der}`;
                 break;
@@ -44,6 +48,8 @@ function jokenpo(){
                 pcPap.style.border= 'none';
                 pcTes.style.border= '3px solid red';
                 texto.innerHTML='Venceu';
+                resultados.innerHTML='Pedra bate Tesoura'
+                resultados.style.color='#26ff00'
                 vit++;
                 document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
                 break;
@@ -56,6 +62,8 @@ function jokenpo(){
                     pcTes.style.border= 'none';
                     pcPe.style.border= '3px solid red';
                     texto.innerHTML='Venceu';
+                    resultados.innerHTML='Papel bate Pedra'
+                    resultados.style.color='#26ff00'
                     vit++;
                     document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
                     break;
@@ -64,6 +72,8 @@ function jokenpo(){
                     pcPe.style.border= 'none';
                     pcPap.style.border= '3px solid red';
                     texto.innerHTML='Empate';
+                    resultados.innerHTML='Papel e Papel'
+                    resultados.style.color='#adb1ad'
                     break;
                     emp++
                     document.getElementById("emp").innerHTML=`Empates:${emp}`;
@@ -72,6 +82,8 @@ function jokenpo(){
                     pcPap.style.border= 'none';
                     pcTes.style.border= '3px solid red';
                     texto.innerHTML='Perdeu';
+                    resultados.innerHTML='Tesoura bate Papel'
+                    resultados.style.color='red'
                     der++;
                     document.getElementById("der").innerHTML=`Derrotas:${der}`;
                     break;
@@ -84,6 +96,8 @@ function jokenpo(){
                     pcPap.style.border= 'none';
                     pcPe.style.border= '3px solid red';
                     texto.innerHTML='Perdeu';
+                    resultados.innerHTML='Pedra bate Tesoura'
+                    resultados.style.color='red'
                     der++;
                     document.getElementById("der").innerHTML=`Derrotas:${der}`;
                     break;
@@ -92,6 +106,8 @@ function jokenpo(){
                     pcTes.style.border= 'none';
                     pcPap.style.border= '3px solid red';
                     texto.innerHTML='Venceu';
+                    resultados.innerHTML='Tesoura bate Papel'
+                    resultados.style.color='#26ff00'
                     vit++;
                     document.getElementById("vit").innerHTML=`Vitórias:${vit}`;
                     break;
@@ -99,7 +115,9 @@ function jokenpo(){
                     pcPap.style.border= 'none';
                     pcPe.style.border= 'none';
                     pcTes.style.border= '3px solid red';
+                    resultados.innerHTML='Tesoura e Tesoura'
                     texto.innerHTML='Empate';
+                    resultados.style.color='#adb1ad'
                     emp++
                     document.getElementById("emp").innerHTML=`Empates:${emp}`;
                     break;
