@@ -19,14 +19,14 @@
 <body>
     <header class='container'>
         <h1>Pedra / Papel / Tesoura / dos Deuses</h1>
+        <nav class='menu'>
+            <p id='vit' class='vic'>Vitórias:</p>
+            <p id='der' class='der'>Derrotas:</p>
+            <p id='emp' class='emp'>Empates:</p>
+        </nav>  
     </header>
-    <div class='menu'>
-        <p id='vit' class='vic'>Vitórias:</p>
-        <p id='der' class='der'>Derrotas:</p>
-        <p id='emp' class='emp'>Empates:</p>
-    </div>
     <div class='interface'>
-        <main class='container'>   
+        <main>   
             <ul id='img' class='esq'>
                 <h2>Player</h2>
                 <li>
@@ -39,14 +39,11 @@
                     <img id='tesoura' src='img/tesoura.png' name='tesoura'>
                 </li>
             </ul>
-        </main>
 
-        <section>
+        <div class='middle'>
             <h3 id='texto'></h3>
             <p id='resultados'></p>
-        </section>
-
-        <aside class='container'>
+        </div>
                 <ul>
                     <h2>Computer</h2>
                     <li>
@@ -59,11 +56,8 @@
                         <img id='pcTes' src='img/tesoura.png'>
                     </li>
                 </ul>
-        </aside>
+        </main>
     </div>
-    <footer>
-        <p>nice</p>
-    </footer>
     <script src='main.js'></script>
 </body>
 </html>
