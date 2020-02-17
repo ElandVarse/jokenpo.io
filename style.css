@@ -50,29 +50,31 @@ header h1{
 .der{color: rgb(184, 66, 66);}
 .vic{color: rgb(38, 255, 0)}
 .emp{color:#adb1ad}
+/*---------------Content----------------- */
+main{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
 /*---------------Ícones----------------- */
 h2{font-size: 15pt;}
 ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
 }
-li{
-    margin-top: 10px;
-}
-img{width: 110px;
+img{width: 100px;
 }
 .esq img:hover{
     background: rgba(63, 63, 63, 0.4);
     border: .2rem solid #26ff00;
     cursor: pointer;
 }
-/*---------------Content----------------- */
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 10px 5px 0 5px;
-    text-align: center;
-}
+/*---------------Meio----------------- */
 .middle{
     display: flex;
     flex-direction: column;
@@ -93,11 +95,13 @@ main{
 @media(min-width: 480px){
 }
 @media(min-width: 720px){
+    header h1{
+        font-size: 24pt;
+    }
     .menu p{
         font-size: 14pt;
     }
     main{
-        margin: 10px 100px 0 100px;
+        margin: 0 100px;
     }
-    img{width: 120px;}
 }
