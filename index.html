@@ -1,12 +1,3 @@
-<!--
-    Objetivos: 
-    - Funcionar
-    - Border iluminado em cima do item escolhido pelo computer assim que o player escolher
-    - Responsivo
-    - Usar o meio pra mostrar o resultado
-    - O Usuário só pode jogar assim que o resultado da partida anterior sumir da tela
-    - Otimizar o código
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +9,7 @@
     <title>Jo-ken-po</title>
 </head>
 <body>
-    <header class='container'>
+    <header>
         <h1>Pedra, Papel e Tesoura dos Deuses</h1>
         <nav class='menu'>
             <p id='vit' class='vic'>Vitórias:</p>
@@ -26,6 +17,7 @@
             <p id='emp' class='emp'>Empates:</p>
         </nav>  
     </header>
+
         <main>
             <ul id='img' class='esq'>
                 <h2>Player</h2>
@@ -39,12 +31,14 @@
                     <img id='tesoura' src='img/tesoura.png' name='tesoura'>
                 </li>
             </ul>
+
             <div class='middle'>
                 <div class='contour'>
                     <h3 id='texto'></h3>
                     <p id='resultados'></p>
                 </div>
             </div>
+            
             <ul>
                 <h2>Computer</h2>
                 <li>

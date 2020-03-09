@@ -1,107 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    outline: none;
-    font-weight: 500;
-    box-sizing: border-box;
-    font-family: 'Press start 2p';
-    color: white;
-    text-shadow: 1px 1px black;
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	outline: none;
+	font-weight: 500;
+	box-sizing: border-box;
+	font-family: 'Press start 2p';
+	color: white;
+	text-shadow: 1px 1px black;
 }
-html{
-    height: 100%;
+
+html {
+	height: 100%;
 }
-body{
-    background: url('https://images.unsplash.com/photo-1567391454009-0894f63e5550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+
+body {
+	background: url('https://images.unsplash.com/photo-1567391454009-0894f63e5550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
-.container{padding: 3% 4%;}
+
 /*---------------Cabecalho----------------- */
-header{
-    display: flex;
-    width: 100%;
+
+header {
+	display: flex;
+	width: 100%;
     flex-direction: column;
+	padding: 3% 4%;
 }
-header h1{
-    font-size: 20pt;
-    text-align: center;
-    text-shadow: 3px 3px 3px black;
+
+header h1 {
+	font-size: 20pt;
+	text-align: center;
+	text-shadow: 3px 3px 3px black;
 }
-.menu{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background: rgba(39, 39, 39, 0.4);
-    border: .2rem solid #2c2c2c;
-    font-size: 10pt;
-    margin-top: 10px;
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background: rgba(39, 39, 39, 0.4);
+	border: .2rem solid #2c2c2c;
+	font-size: 10pt;
+    margin-top: 50px;
 }
-.menu p{
-    font-size: 10pt;
-    padding: 5pt 0;
-    text-shadow: 3px 3px 1px black;
+
+.menu p {
+	font-size: 10pt;
+	padding: 5pt 0;
+	text-shadow: 3px 3px 1px black;
 }
-.der{color: rgb(184, 66, 66);}
-.vic{color: rgb(38, 255, 0)}
-.emp{color:#adb1ad}
+
+.der {
+	color: rgb(184, 66, 66);
+}
+
+.vic {
+	color: rgb(38, 255, 0)
+}
+
+.emp {
+	color: #adb1ad
+}
+
+
 /*---------------Content----------------- */
-main{
-    display: flex;
-    flex:1;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    height: 100%;
+
+main {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	height: 100%;
 }
+
+
 /*---------------Ícones----------------- */
-h2{font-size: 15pt;}
-ul{
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;   
+
+h2 {
+	font-size: 15pt;
 }
-img{width: 100px;
+
+ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
-.esq img:hover{
-    background: rgba(63, 63, 63, 0.4);
-    border: .2rem solid #26ff00;
-    cursor: pointer;
+
+img {
+	width: 130px;
 }
+
+.esq img:hover {
+	background: rgba(63, 63, 63, 0.4);
+	border: .2rem solid #26ff00;
+	cursor: pointer;
+}
+
+
 /*---------------Meio----------------- */
-.middle{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 15px;
+
+.middle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-left: 15px;
 }
-.contour{
-    background: rgba(39, 39, 39, 0.4);
-    border: .2rem solid #2c2c2c;
-    padding: 2%;
+
+.contour {
+	background: rgba(39, 39, 39, 0.4);
+	border: .2rem solid #2c2c2c;
+	padding: 2%;
 }
-.contour p{
-    margin-top: 10px;
+
+.contour p {
+	margin-top: 10px;
 }
+
+
 /*---------------Resolução----------------- */
-@media(min-width: 480px){
+
+@media(min-width: 480px) {
+    .menu{
+        margin:10px;
+    }
+    img{
+        width: 80px;
+    }
 }
-@media(min-width: 720px){
-    header h1{
-        font-size: 24pt;
+
+@media(min-width: 720px) {
+	header h1 {
+		font-size: 30pt;
+	}
+	.menu p {
+		font-size: 14pt;
     }
-    .menu p{
-        font-size: 14pt;
+    h2{
+        font-size: 18pt;
     }
-    main{
-        margin: 0 100px;
-    }
+	main {
+		margin: 0 100px;
+	}
 }
