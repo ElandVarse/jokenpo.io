@@ -119,11 +119,16 @@ img {
 .contour {
 	background: rgba(39, 39, 39, 0.4);
 	border: .2rem solid #2c2c2c;
-	padding: 2%;
+	padding: 30px 15px;
+}
+.middle h3{
+	font-size: 14pt;
 }
 
-.contour p {
-	margin-top: 10px;
+.middle p {
+	margin-top: 20pt;
+	line-height: 20px;
+	font-size: 12pt
 }
 
 
