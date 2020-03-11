@@ -45,28 +45,25 @@ listaArr.forEach(element => {
 		const empate = () => {
 			//Texto de resultado:
 			text.innerHTML = 'Empate!'
+			text.style.color = '#adb1ad'
 			resultados.innerHTML = `${player} e ${computer}`
-			resultados.style.color = 'grey'
 			//Placar
 			draw += 1;
 			contEmp.innerHTML = `Empates:${draw}`
-			console.log('Empate!')
 		}
 		const derrota = () => {
-			text.innerHTML = 'Derrota!'
+			text.innerHTML = 'Você perdeu'
+			text.style.color = 'red'
 			resultados.innerHTML = `${computer} bate ${player}`
-			resultados.style.color = 'red'
 			lose += 1;
 			contDer.innerHTML = `Derrotas:${lose}`
-			console.log('derrota!')
 		}
 		const vitoria = () => {
 			text.innerHTML = 'Vitória!'
+			text.style.color = '#62ff47'
 			resultados.innerHTML = `${player} bate ${computer}`
-			resultados.style.color = 'green'
 			victory += 1;
 			contVit.innerHTML = `Vitórias:${victory}`
-			console.log('Vitória!')
 		}
         //Switch no player e então no computador pra definir o resultado
 		switch (player) {
