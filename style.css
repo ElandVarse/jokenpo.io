@@ -4,7 +4,7 @@
 	outline: none;
 	font-weight: 800;
 	box-sizing: border-box;
-	font-family: 'Press Start 2P';
+	font-family: 'Press Start 2P', sans-serif;
 	color: white;
 	text-shadow: 1px 1px black;
 }
@@ -13,167 +13,133 @@ html {
 	height: 100%;
 }
 
-span{
-	color: #29e1e7;
+body {
+	background-color: #FFB6C1;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-body {
-	background: url('https://images.unsplash.com/photo-1577083552792-a0d461cb1dd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1136&q=80');
-	background-position: center;
-	background-size: cover;
-    background-repeat: no-repeat;
-	background-color: black;
-}
 /*---------------Cabecalho----------------- */
 
-header {
+
+/*PLACAR E CABEÇALHO*/
+
+header{
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 30px;
+	background-color: #CC546688;
+	padding: 10px 0;
 }
 
-header h1 {
-	margin: 20px 0;
-	font-size: 20pt;
-	text-shadow: 3px 3px 3px black;
-	text-align: center;
-}
-
-.menu {
-	padding: 5px 0;
-	background: rgba(0, 0, 0, 0.4);
-}
-
-.menu p {
-	font-size: 14pt;
-	text-align: center;
-	padding: 10px 30px;
-	text-shadow: 3px 3px 1px black;
-}
-
-.der {color: #b84242;}
-
-.vic {color: #62ff47}
-
-.emp {color: #adb1ad}
-
-
-/*---------------Content----------------- */
-
-main {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
-	height: 100%;
-}
-
-
-/*---------------Ícones----------------- */
-
-.escolhas{
-	background: rgba(10, 10, 10, 0.4);
-	padding: 10px;
-}
-
-.escolhas h2{
-	font-size: 20pt;
-	margin: 10px;
-}
-
-
-ul {
-	list-style-type: none;
+header ul, li{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-}
-
- img {
-	width: 100px;
-	transition: all .4s;
-}
-
-.esq img:hover{
-	transform: scale(1.15);
-	background: rgba(63, 63, 63, 0.4);
-	border: 3px solid #29e1e7;
-	cursor: pointer;
-}
-
-/*---------------Meio----------------- */
-
-.middle {
-	display: flex;
-	justify-content: center;
 	align-items: center;
+	font-size: 12px;
+}
+
+img{
+	width: 100px;
+}
+
+ul{
+	list-style: none;
+}
+
+/*CONTEÚDO JOGO*/
+
+main{
+	display: flex;
+	flex:1;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.middle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 140px;
+	width: 350px;
 	text-align: center;
-	margin: 10px;
+	border-radius: 30px;
+	border: 2px solid #f9f9f9ee;
+	transition: all .5s;	
 }
 
 .middle h3{
-	font-size: 14pt;
+	font-size: 18px;
 }
 
-.middle p {
-	margin-top: 20pt;
-	line-height: 20px;
-	font-size: 12pt
+.middle p{ 
+	font-size: 12px;
+	padding-top: 10px;
+	margin-top: 10px;
+	border-top: 1px solid #ffffffaa;
 }
 
-.contour {
-	background: rgba(0, 0, 0, 0.6);
-	padding: 20px 40px;
+.escolhas{
+	text-align: center;
+	font-size: 14px;
+}
+
+.escolhas img{
+	margin-top: 30px;
+	transition: .05s all;
+	border-radius: 30px;
+}
+
+.escolhas #left img{
+	cursor: pointer;
+}
+
+.escolhas #left img:hover{
+	background: #FF697F88;
+	transform: scale(1.1);
+}
+
+.material-icons{
+	cursor: pointer;
+	font-size: 30px;
 }
 
 .hide{
-	visibility: hidden;
+	opacity: 0;
 }
 
+/*RODAPÉ*/
 
-/*---------------Resolução-----------------*/
+footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #CC546688;
+}
 
-@media(min-width: 760px) {
+/* SCREEN  */
 
-	.menu{
-		width: 100%;
-		display: flex;
-		flex-direction: row;
+@media screen and (max-width:620px){
+	header ul{
+		height: 80px;
+		flex-direction: column;
 		justify-content: space-around;
 	}
+
 	main{
+		margin: 10px 0;
+		flex-direction: column;
+	}
+
+	.middle{
+		background-color: #ff00b333;
+		height: 120px;
+		width: 250px;
+	}
+
+	main .escolhas ul{
+		display: flex;
 		flex-direction: row;
 	}
-
-	.escolhas{
-		padding-bottom: 80px;
-	}
-
-	.escolhas h2{
-		margin-bottom: 40px;
-	}
-
-	.middle h3{
-		font-size: 26pt;
-		text-shadow: 3px 3px 1px black;
-	}
-
-	ul{
-		height: 100%;
-		display: grid;
-		grid-template-rows: 1fr 1fr 1fr;
-	}
-	
-	img{
-		width: 120px;
-	}
 }
 
-@media(min-width: 1280px){
-	.escolhas{
-		margin: 20px 100px;
-	}
-}

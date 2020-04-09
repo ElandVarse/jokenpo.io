@@ -5,57 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='style.css' rel='stylesheet'>
     <title>Jokenpo</title>
 </head>
 <body>
     <header>
-        <h1>Jokenpo <span> 'Angelical'</span></h1>
-        <nav class='menu'>
-            <p id='vit' class='vic'>Vitórias:0</p>
-            <p id='der' class='der'>Derrotas:0</p>
-            <p id='emp' class='emp'>Empates:0</p>
-        </nav>  
+        <ul>
+            <li>
+                Vitórias: <p id='vit'></p>
+            </li>
+            <li>
+                Derrotas: <p id='der'></p>
+            </li>
+            <li class='emp'>
+                Empates: <p id='emp'></p>
+            </li>
+        </ul>
     </header>
 
-        <main>
-            <div class='escolhas'>  
-                <h2>Player</h2>
-                <ul id='left' class='esq'>
-                    <li>
-                        <img id='pedra' src='img/pedra.png' name='pedra'>
-                    </li>
-                    <li>
-                        <img id='papel' src='img/papel.png' name='papel'>
-                    </li>
-                    <li>
-                        <img id='tesoura' src='img/tesoura.png' name='tesoura'>
-                    </li>
-                </ul>
-            </div>
+    <main>
+        <div class='escolhas'>  
+            <h2>Player</h2>
+            <ul id='left' class='lista'>
+                <li>
+                    <img id='Pedra' src='assets/pedra.png' name='pedra'>
+                </li>
+                <li>
+                    <img id='Papel' src='assets/papel.png' name='papel'>
+                </li>
+                <li>
+                    <img id='Tesoura' src='assets/tesoura.png' name='tesoura'>
+                </li>
+            </ul>
+        </div>
 
-            <div class='middle hide'>
-                <div class='contour'>
-                    <h3 id='texto'></h3>
-                    <p id='resultados'></p>
-                </div>
+        <div class='middle hide' id="middle">
+            <div class='contour'>
+                <h3></h3>
+                <p id='resultados'></p> 
             </div>
+        </div>
 
-            <div class='escolhas'>  
-                <h2>Computer</h2>
-                <ul id='right'>
-                    <li>
-                        <img id='pedra' src='img/pedra.png'>
-                    </li>
-                    <li>
-                        <img id='papel' src='img/papel.png'>
-                    </li>
-                    <li>
-                        <img id='tesoura' src='img/tesoura.png'>
-                    </li>
-                </ul>
-            </div>
-        </main>
+        <div class='escolhas'>  
+            <h2>Computer</h2>
+            <ul id='right' class='lista'>
+                <li>
+                    <img id='Pedra' src='assets/pedra.png'>
+                </li>
+                <li>
+                    <img id='Papel' src='assets/papel.png'>
+                </li>
+                <li>
+                    <img id='Tesoura' src='assets/tesoura.png'>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <span id='reset' class="material-icons">replay</span>
+    </footer>
 
     <script src='main.js'></script>
 </body>

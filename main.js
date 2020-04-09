@@ -1,11 +1,7 @@
 //Contador
-const contVit = document.querySelector('#vit')
-const contDer = document.querySelector('#der')
-const contEmp = document.querySelector('#emp')
 let victory = 0;
 let lose = 0;
 let draw = 0;
-
 
 // //definindo resultado do computador
 const computerPlay = () => {
@@ -13,97 +9,112 @@ const computerPlay = () => {
 	const i = (Math.floor(Math.random() * 3));
 	const pcResult = computer[i];
 
-    //definindo uma border pro resultado escolhido
+    //definindo um background pro resultado escolhido
 	computer.forEach(element => {
 		if (element === pcResult) {
-			element.style.border = '3px solid red'
+			element.style.background = '#FF000088'
 		} else {
-			element.style.border = 'none'
+			element.style.background = 'none'
 		}
+
+		//resetar os resultados
+		reset.addEventListener('click', () => {
+			victory=0, lose=0, draw=0;
+			vit.innerHTML = `0`
+			der.innerHTML = `0`
+			emp.innerHTML = `0`
+			element.style.background='none'
+			document.querySelector(".middle").classList.add("hide")
+			
+		})
 	})
 	return pcResult.id
 }
 
 //pegando a lista do html
-const lista = document.querySelectorAll('#left li');
+const lista = document.querySelectorAll('#left li img');
 const listaArr = Array.from(lista)
 //faz com que o jogo só seja chamado se uma opção por clicada
 listaArr.forEach(element => {
-	element.onclick = function (e) {
+	element.onclick = async function (e) {
 		//definindo o player/pc
 		const player = e.target.id;
-        const computer = computerPlay();
-        
+		const computer = computerPlay();
+		
         //retira o hide do middle para que não apareça antes da hora
         document.querySelector(".middle").classList.remove("hide")
 
         //Textos
-		const text = document.querySelector('.middle .contour h3')
-		const resultados = document.querySelector('.middle .contour p')
+		const text = document.querySelector('.middle h3')
+		const resultados = document.querySelector('.middle p')
 
         //funções para vitória/derrota/empate
 		const empate = () => {
 			//Texto de resultado:
 			text.innerHTML = 'Empate!'
-			text.style.color = '#adb1ad'
+			text.style.color = '#F8EBFF'
+			middle.style.backgroundColor = '#80808055'
 			resultados.innerHTML = `${player} e ${computer}`
 			//Placar
 			draw += 1;
-			contEmp.innerHTML = `Empates:${draw}`
+			emp.innerHTML = `${draw}`
 		}
 		const derrota = () => {
-			text.innerHTML = 'Você perdeu'
-			text.style.color = 'red'
+			text.innerHTML = 'Você perdeu.'
+			text.style.color = '#F8EBFF'
+			middle.style.backgroundColor = '#FF000088'
 			resultados.innerHTML = `${computer} bate ${player}`
 			lose += 1;
-			contDer.innerHTML = `Derrotas:${lose}`
+			der.innerHTML = `${lose} `
 		}
 		const vitoria = () => {
 			text.innerHTML = 'Vitória!'
-			text.style.color = '#62ff47'
+			text.style.color = '#F8EBFF'
+			middle.style.backgroundColor = '#FF697Faa'
 			resultados.innerHTML = `${player} bate ${computer}`
 			victory += 1;
-			contVit.innerHTML = `Vitórias:${victory}`
+			vit.innerHTML = `${victory}`
 		}
+
         //Switch no player e então no computador pra definir o resultado
 		switch (player) {
-			case 'pedra':
+			case 'Pedra':
 				switch (computer) {
-					case 'pedra':
+					case 'Pedra':
 						empate();
 						break;
-					case 'papel':
+					case 'Papel':
 						derrota();
 						break;
-					case 'tesoura':
+					case 'Tesoura':
 						vitoria();
 						break;
 				}
 				break;
 
-			case 'papel':
+			case 'Papel':
 				switch (computer) {
-					case 'pedra':
+					case 'Pedra':
 						vitoria();
 						break;
-					case 'papel':
+					case 'Papel':
 						empate();
 						break;
-					case 'tesoura':
+					case 'Tesoura':
 						derrota();
 						break;
 				}
 				break;
 
-			case 'tesoura':
+			case 'Tesoura':
 				switch (computer) {
-					case 'pedra':
+					case 'Pedra':
 						derrota();
 						break;
-					case 'papel':
+					case 'Papel':
 						vitoria();
 						break;
-					case 'tesoura':
+					case 'Tesoura':
 						empate();
 						break;
 				}
