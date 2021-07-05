@@ -1,4 +1,7 @@
 # Jokenpo
- Pedra, papel e tesoura usando javascript.
+
+Rock, Paper, Scissors Game built with pure HTML, CSS, Javascript.
+
+![Game](https://i.imgur.com/anhVXnW.png?1)
+
  
- Just a little game of rock, paper, scissors.
