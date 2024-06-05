@@ -1,11 +1,8 @@
-# Tabs Section
+# Jokenpo
 
-Tabs Section powered by React ⚡
+Rock, Paper, Scissors game built with pure HTML, CSS, Javascript. Currently only in pt-br.
 
-![Tabs](https://github.com/ElandVarse/react-tabs/blob/main/src/assets/react-tabs.gif?raw=true)
+![Game](https://i.imgur.com/anhVXnW.png?1)
 
-
-## Instalation
-
-- npm install
-- npm run dev
+### You can check the result here:
+https://elandvarse.github.io/jokenpo.io/
